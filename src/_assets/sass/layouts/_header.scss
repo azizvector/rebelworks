@@ -1,0 +1,16 @@
+//
+// Header
+//
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0;
+	align-items: center;
+	position: absolute;
+	z-index: 97;
+}
+
+.header {
+	background-color: transparent;
+}

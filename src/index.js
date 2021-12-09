@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import axios from "axios";
+import App from "./app/App";
+import { setupAxios } from "./redux/setupAxios";
+import { SplashScreenProvider } from "./components";
+import store from "./redux/store";
+import "./_assets/sass/style.scss";
+
+setupAxios(axios, store);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <SplashScreenProvider>
+    <App store={store} />
+  </SplashScreenProvider>,
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

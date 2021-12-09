@@ -1,0 +1,21 @@
+//
+// Custom utilities
+//
+
+$utilities: map-merge(
+    $utilities,
+    (
+        "color": (
+            property: color,
+            class: text,
+            values:
+                map-merge(
+                    $theme-colors,
+                    (
+                        "yellow": rgba(255, 233, 34, 1),
+                        "grey": rgba(255, 255, 255, 0.4),
+                    )
+                ),
+        ),
+    )
+);
